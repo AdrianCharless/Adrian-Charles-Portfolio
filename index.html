@@ -8,13 +8,14 @@
     <link rel="stylesheet" href="mediaqueries.css">
 </head>
 <body>
+    <section id="top">
     <nav id="desktop-nav">
         <div class="logo">Adrian Charles</div>
         <div>
             <ul class="nav-links">
                 <li><a href="#about">About</a></li>
                 <li><a href="#experience">Experience</a></li>
-                <li><a href="#projects">Projects</a></li>
+                <!-- <li><a href="#projects">Projects</a></li> -->
                 <li><a href="#contact">Contact Me</a></li>
             </ul>
         </div>
@@ -30,7 +31,7 @@
             <div class="menu-links">
                 <li><a href="#about" onclick="toggleMenu()">About</a></li>
                 <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
-                <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+                <!-- <li><a href="#projects" onclick="toggleMenu()">Projects</a></li> -->
                 <li><a href="#contact" onclick="toggleMenu()">Contact Me</a></li>
             </div>
         </div>
@@ -86,7 +87,7 @@
         <h1 class="title">Experience</h1>
         <div class="experience-details-container">
             <div class="about-containers">
-                <div class="details-containers">
+                <div class="details-container">
                     <h2 class="experience-sub-title">Frontend Development</h2>
                     <div class="article-container">
                         <article>
@@ -133,9 +134,88 @@
                         </article>
                     </div>
                 </div>
+                <div class="details-container">
+                    <h2 class="experience-sub-title">Frontend Development</h2>
+                    <div class="article-container">
+                        <article>
+                            <img src="./assets/checkmark.png" alt="experience icon" class="icon">
+                            <div>
+                                <h3>HTML</h3>
+                                <p>Experienced</p>                    
+                            </div>
+                        </article>
+                        <article>
+                            <img src="./assets/checkmark.png" alt="experience icon" class="icon">
+                            <div>
+                                <h3>CSS</h3>
+                                <p>Experienced</p>                    
+                            </div>
+                        </article>
+                        <article>
+                            <img src="./assets/checkmark.png" alt="experience icon" class="icon">
+                            <div>
+                                <h3>Java Script</h3>
+                                <p>Experienced</p>                    
+                            </div>
+                        </article>
+                        <article>
+                            <img src="./assets/checkmark.png" alt="experience icon" class="icon">
+                            <div>
+                                <h3>PHP</h3>
+                                <p>Experienced</p>                    
+                            </div>
+                        </article>
+                        <article>
+                            <img src="./assets/checkmark.png" alt="experience icon" class="icon">
+                            <div>
+                                <h3>SQL</h3>
+                                <p>Experienced</p>                    
+                            </div>
+                        </article>
+                        <article>
+                            <img src="./assets/checkmark.png" alt="experience icon" class="icon">
+                            <div>
+                                <h3>C</h3>
+                                <p>Experienced</p>                    
+                            </div>
+                        </article>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        <!-- change to href to #projects once added -->
+        <img src="./assets/arrow.png" alt="Next Section Arrow" class="icon arrow" onclick="location.href='./#contact'">
+    </section>
+    <section id="contact">
+        <p class="section__text__p1">Get in Touch</p>
+        <h1 class="title">Contact Me</h1>
+        <div class="contact-info-upper-container">
+            <div class="contact-info-container">
+                <img src="./assets/email.png" alt="Email Icon" class="icon contact-icon email-icon">
+                <p><a href="mailto:anuragcharles@yahoo.ca">My Email</a></p>
+            </div>
+
+            <div class="contact-info-container">
+                <img src="./assets/linkedin.png" alt="LinkedIn Icon" class="icon contact-icon">
+                <p><a href="https://www.linkedin.com/in/adrian-charles-6a8991253/">LinkedIn</a></p>
             </div>
         </div>
     </section>
+    <footer>
+        <nav>
+            <div class="nav-links-container">
+                <ul class="nav-links">
+                    <li><a href="#top">Back to Top</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <!-- <li><a href="#projects">Projects</a></li> -->
+                    <li><a href="#contact">Contact Me</a></li>
+                </ul>
+            </div>
+        </nav>
+        <p>Copyright &#169; 2024 Adrian Charles. All Rights Reserved</p>
+    </footer>
     <script src="script.js"></script>
 </body>
 </html>
