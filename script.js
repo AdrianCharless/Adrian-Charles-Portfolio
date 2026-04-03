@@ -129,7 +129,7 @@ const interviewAnswers = [
   {
     keywords: ["contact", "email", "linkedin", "github", "reach", "connect"],
     answer:
-      "You can reach me by email at adrian6charles23@gmai.com, connect with me on LinkedIn at linkedin.com/in/adrian-charles-6a8991253, or view my GitHub at github.com/AdrianCharless.",
+      "You can reach me by email at adrian6charles23@gmail.com, connect with me on LinkedIn at linkedin.com/in/adrian-charles-6a8991253, or view my GitHub at github.com/AdrianCharless.",
   },
 ];
 
