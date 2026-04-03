@@ -1,281 +1,478 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Adrian Charles</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="mediaqueries.css">
-</head>
-<body>
-    <section id="top">
-    <nav id="desktop-nav">
-        <div class="logo">Adrian Charles</div>
-        <div>
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <!-- <li><a href="#projects">Projects</a></li> -->
-                <li><a href="#contact">Contact Me</a></li>
-            </ul>
-        </div>
-    </nav>
-    <nav id="hamburger-nav">
-        <div class="logo">Adrian Charles</div>
-        <div class="hamburger-menu">
-            <div class="hamburger-icon" onclick="toggleMenu()">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <div class="menu-links">
-                <li><a href="#about" onclick="toggleMenu()">About</a></li>
-                <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
-                <!-- <li><a href="#projects" onclick="toggleMenu()">Projects</a></li> -->
-                <li><a href="#contact" onclick="toggleMenu()">Contact Me</a></li>
-            </div>
-        </div>
-    </nav>
-    <section id="profile">
-        <div class="section__pic-container">
-            <img src="./assets/profile-pic.png" alt="Adrian Charles Profile Picture">
-        </div>
-        <div class="section__text">
-            <p class="section__text__p1">Hey! I'm</p>
-            <h1 class="title">Adrian Charles</h1>
-            <p class="section__text__p2">Computer Engineering Student</p>
-            <div class="btn-container">
-                <button class="btn btn-color-2" onclick="window.open('./assets/Adrian Charles - Resume.docx')">Download CV</button>
-                <button class="btn btn-color-1" onclick="location.href='./#contact'">Contact Info</button>
-            </div>
-            <div id="socials-container">
-                <img src="./assets/linkedin.png" alt="My LinkedIn Profile" class="icon" onclick="location.href='https://www.linkedin.com/in/adrian-charles-6a8991253?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3B6iVohfqORF2JRqVgRlbzvw%3D%3D'">
-                <img src="./assets/github.png" alt="My Github Profile" class="icon" onclick="location.href='https://github.com/AdrianCharless'">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="A dreamy starfield portfolio for Adrian Charles, a Computer Engineering student focused on software, data, and cloud engineering."
+    />
+    <title>Adrian Charles | Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
 
-            </div>
-        </div>
-    </section>
-    <section id="about">
-        <p class="section__text__p1">Get to Know More</p>
-        <h1 class="title">About Me</h1>
-        <div class="section-container">
-            <div class="section__pic-container">
-                <img src="./assets/about-pic.jpg" alt="Profile Picture" class="about-pic">
-            </div>
-            <div class="about-details-container">
-                <div class="about-containers">
-                    <div class="details-container">
-                        <img src="./assets/experience.png" alt="Experience Icon" class="icon">
-                        <h3>Experience</h3>
-                        <p>2 years of<br>Software Development</p>
-                    </div>
-                    <div class="details-container">
-                        <img src="./assets/education.png" alt="Education Icon" class="icon">
-                        <h3>Education</h3>
-                        <p>4th Year - B.A.Sc.<br>in Computer Engineering</p>
-                    </div>
-                </div>
-                <div class="text-container">
-                    <p>My name is Adrian Charles and I am a full-time engineering student attending Queen's University. I am looking for a summer internship in the engineering field where my technical skills and passion for programming can be utilized to contribute to a company's success, all while gaining practical experience in the field. These experiences will expand my understanding of the engineering world and help me towards my goal of a career as a professional data engineer. </p>
-                </div>
-            </div>
-        </div>
-        <img src="./assets/arrow.png" alt="Next Section Arrow" class="icon arrow" onclick="location.href='./#experience'">
-    </section>
-    <section id="experience">
-        <p class="section__text__p1">Explore My</p>
-        <h1 class="title">Experience</h1>
-        <div class="experience-details-container">
-            <div class="about-containers">
-                <div class="details-container">
-                    <h2 class="experience-sub-title">Frontend Development</h2>
-                    <div class="article-container">
-                        <article>
-                            <img src="./assets/html.png" alt="experience icon" class="icon">
-                            <div>
-                                <h3>HTML</h3>
-                                <p>Intermediate</p>                    
-                            </div>
-                        </article>
-                        <article>
-                            <img src="./assets/css.png" alt="experience icon" class="icon">
-                            <div>
-                                <h3>CSS</h3>
-                                <p>Intermediate</p>                    
-                            </div>
-                        </article>
-                        <article>
-                            <img src="./assets/javascript.png" alt="experience icon" class="icon">
-                            <div>
-                                <h3>Java Script</h3>
-                                <p>Basics</p>                    
-                            </div>
-                        </article>
-                    </div>
-                </div>
-                <div class="details-container">
-                    <h2 class="experience-sub-title">Backend Development</h2>
-                    <div class="article-container">
-                        <article>
-                            <img src="./assets/c.png" alt="experience icon" class="icon">
-                            <div class="containers-text">
-                                <h3>C</h3>
-                                <p>Intermediate</p>                    
-                            </div>
-                        </article>
-                        <article>
-                            <img src="./assets/php.png" alt="experience icon" class="icon">
-                            <div class="containers-text">
-                                <h3>PHP</h3>
-                                <p>Intermediate</p>                    
-                            </div>
-                        </article>
-                        <article>
-                            <img src="./assets/sql.png" alt="experience icon" class="icon">
-                            <div class="containers-text">
-                                <h3>SQL</h3>
-                                <p>Basics</p>                    
-                            </div>
-                        </article>
-                        <article>
-                            <img src="./assets/java.png" alt="experience icon" class="icon">
-                            <div class="containers-text">
-                                <h3>Java</h3>
-                                <p>Intermediate</p>                    
-                            </div>
-                        </article>
-                        <article>
-                            <img src="./assets/javascript.png" alt="experience icon" class="icon">
-                            <div class="containers-text">
-                                <h3>Java Script</h3>
-                                <p>Basics</p>                    
-                            </div>
-                        </article>
-                    </div>
-                </div>
-                
-            </div>
-        </div>
-        <!-- change to href to #projects once added -->
-        <img src="./assets/arrow.png" alt="Next Section Arrow" class="icon arrow" onclick="location.href='./#projects'">
-    </section>
-    <section id="projects">
-        <p class="section__text__p1">Browse My Recent</p>
-        <h1 class="title">Projects</h1>
-        <div class="experience-details-container">
-          <div class="about-containers">
-            <div class="details-container color-container">
-              <div class="article-container">
-                <img
-                  src="./assets/NBA-Project.png"
-                  alt="Project 1"
-                  class="project-img"
-                />
-              </div>
-              <h2 class="experience-sub-title project-title">End-to-end NBA ETL </h2>
-              <div class="btn-container">
-                <button
-                  class="btn btn-color-2 project-btn"
-                  onclick="location.href='https://github.com/AdrianCharless/nba-performance-project'"
-                >
-                  Github
-                </button>
-                <button
-                  class="btn btn-color-2 project-btn"
-                  onclick="location.href='https://nba-performance-project.streamlit.app/'"
-                >
-                  Live Demo
-                </button>
-              </div>
-            </div>
+    <div class="stars" id="stars" aria-hidden="true"></div>
 
-            <!-- <div class="details-container color-container">
-              <div class="article-container">
-                <img
-                  src="./assets/project-2.png"
-                  alt="Project 2"
-                  class="project-img"
-                />
-              </div>
-              <h2 class="experience-sub-title project-title">Project Two</h2>
-              <div class="btn-container">
-                <button
-                  class="btn btn-color-2 project-btn"
-                  onclick="location.href='https://github.com/'"
-                >
-                  Github
-                </button>
-                <button
-                  class="btn btn-color-2 project-btn"
-                  onclick="location.href='https://github.com/'"
-                >
-                  Live Demo
-                </button>
-              </div>
-            </div> -->
+    <header class="site-header">
+      <nav class="nav section-shell" aria-label="Primary navigation">
+        <a class="brand" href="#top">Adrian Charles</a>
 
-            <!-- <div class="details-container color-container">
-              <div class="article-container">
-                <img
-                  src="./assets/project-3.png"
-                  alt="Project 3"
-                  class="project-img"
-                />
-              </div>
-              <h2 class="experience-sub-title project-title">Project Three</h2>
-              <div class="btn-container">
-                <button
-                  class="btn btn-color-2 project-btn"
-                  onclick="location.href='https://github.com/'"
-                >
-                  Github
-                </button>
-                <button
-                  class="btn btn-color-2 project-btn"
-                  onclick="location.href='https://github.com/'"
-                >
-                  Live Demo
-                </button>
-              </div>
-            </div> 
-          </div> -->
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="site-menu"
+          aria-label="Toggle navigation"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <div class="nav-menu" id="site-menu">
+          <a class="nav-link" href="#about">About</a>
+          <a class="nav-link" href="#experience">Experience</a>
+          <a class="nav-link" href="#projects">Projects</a>
+          <a class="nav-link" href="#contact">Contact</a>
         </div>
-        <img
-          src="./assets/arrow.png"
-          alt="Arrow icon"
-          class="icon arrow"
-          onclick="location.href='./#contact'"
-        />
+      </nav>
+    </header>
+
+    <main id="main-content">
+      <section class="section hero" id="top">
+        <div class="hero-copy" data-reveal>
+          <h1>Adrian Charles</h1>
+          <p class="hero-role">Computer Engineering Student</p>
+          <p class="hero-description">
+            I build thoughtful software with a growing focus on data engineering,
+            cloud systems, and practical problem-solving. I am currently studying
+            at Queen's University and looking for opportunities where curiosity,
+            reliability, and clean engineering matter.
+          </p>
+
+          <div class="hero-actions">
+            <a class="button-link button-link--solid" href="#projects"
+              >View Projects</a
+            >
+            <a class="button-link button-link--ghost" href="#contact"
+              >Contact Me</a
+            >
+          </div>
+
+          <div class="hero-links">
+            <a
+              class="chip-link"
+              href="https://github.com/AdrianCharless"
+              target="_blank"
+              rel="noreferrer"
+              >GitHub</a
+            >
+            <a
+              class="chip-link"
+              href="https://www.linkedin.com/in/adrian-charles-6a8991253/"
+              target="_blank"
+              rel="noreferrer"
+              >LinkedIn</a
+            >
+            <a class="chip-link" href="mailto:adrian6charles23@gmail.com"
+              >Email</a
+            >
+          </div>
+        </div>
+
+        <aside class="hero-card" data-reveal>
+          <div class="hero-card__glow" aria-hidden="true"></div>
+          <p class="eyebrow eyebrow--muted">Portrait Space</p>
+          <div class="portrait-frame">
+                 <img src="./assets/p-pic.png" alt="Portrait of Adrian Charles" class="portrait-image" />
+            
+            </div>
+          </div>
+
+          <div class="hero-card__meta">
+            <div class="meta-pill">
+              <span class="meta-pill__label">School</span>
+              <strong>Queen's University</strong>
+            </div>
+            <div class="meta-pill">
+              <span class="meta-pill__label">Focus</span>
+              <strong>Data and Cloud Engineering</strong>
+            </div>
+          </div>
+        </aside>
       </section>
-    <section id="contact">
-        <p class="section__text__p1">Get in Touch</p>
-        <h1 class="title">Contact Me</h1>
-        <div class="contact-info-upper-container">
-            <div class="contact-info-container">
-                <img src="./assets/email.png" alt="Email Icon" class="icon contact-icon email-icon">
-                <p><a href="mailto:adrian6charles23@gmai.com">Send Me An Email</a></p>
+
+      <section class="section" id="about">
+        <div class="section-heading" data-reveal>
+          <p class="eyebrow">About</p>
+          <h2>Grounded in engineering, drawn to building systems that last.</h2>
+        </div>
+
+        <div class="about-grid">
+          <article class="glass-panel about-copy" data-reveal>
+            <p>
+              My name is Adrian Charles and I am a full-time Computer
+              Engineering student attending Queen's University. I am looking for
+              a summer internship in the engineering field where my technical
+              skills and passion for programming can be used to contribute to a
+              team's success while helping me gain practical experience.
+            </p>
+            <p>
+              Every project expands my understanding of how strong software is
+              designed, built, and maintained. That hands-on learning is helping
+              me move toward my long-term goal of becoming a professional data
+              engineer with a strong foundation in software and cloud systems.
+            </p>
+          </article>
+
+          <div class="about-highlights" data-reveal>
+            <article class="glass-panel stat-card">
+              <p class="stat-card__label">Experience</p>
+              <h3>2 years</h3>
+              <p>Software development across frontend, backend, and project work.</p>
+            </article>
+
+            <article class="glass-panel stat-card">
+              <p class="stat-card__label">Education</p>
+              <h3>4th Year B.A.Sc.</h3>
+              <p>Computer Engineering at Queen's University.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="experience">
+        <div class="section-heading" data-reveal>
+          <p class="eyebrow">Experience</p>
+          <h2>Hands-on engineering experience shaped by software, systems, and collaboration.</h2>
+        </div>
+
+        <div class="experience-list">
+          <article class="glass-panel experience-card" data-reveal>
+            <div class="experience-card__header">
+              <div>
+                <p class="experience-card__company">GE Vernova</p>
+                <h3>Engineering Intern</h3>
+              </div>
+              <div class="experience-card__meta">
+                <span>Peterborough, Ontario</span>
+                <span>May 2024 - Aug 2024</span>
+              </div>
             </div>
 
-            <div class="contact-info-container">
-                <img src="./assets/linkedin.png" alt="LinkedIn Icon" class="icon contact-icon">
-                <p><a href="https://www.linkedin.com/in/adrian-charles-6a8991253/">LinkedIn</a></p>
+            <ul class="experience-points">
+              <li>
+                Designed and developed a report generation tool using PHP,
+                reducing manual engineering report creation and improving report
+                data storage.
+              </li>
+              <li>
+                Built and deployed a web UI with HTML and CSS so engineers could
+                generate standardized reports on demand.
+              </li>
+              <li>
+                Maintained and improved existing internal tools by adding
+                features, increasing reliability, and debugging issues in
+                deployed systems.
+              </li>
+              <li>
+                Collaborated with fellow engineering interns and stakeholders to
+                deliver data-driven tools based on operational requirements.
+              </li>
+            </ul>
+          </article>
+
+          <article class="glass-panel experience-card" data-reveal>
+            <div class="experience-card__header">
+              <div>
+                <p class="experience-card__company">GE Vernova</p>
+                <h3>Engineering Intern</h3>
+              </div>
+              <div class="experience-card__meta">
+                <span>Peterborough, Ontario</span>
+                <span>May 2023 - Aug 2023</span>
+              </div>
             </div>
+
+            <ul class="experience-points">
+              <li>
+                Developed full-stack internal applications using PHP, MySQL, and
+                JavaScript, including a Customer Service Dashboard and Document
+                Locator Tool that improved data accessibility and workflow
+                efficiency.
+              </li>
+              <li>
+                Designed relational data models and implemented SQL queries for
+                structured data retrieval, supporting accurate and accessible
+                internal data.
+              </li>
+              <li>
+                Worked alongside engineers and interns in a large team
+                environment while gaining exposure to mechanical engineering
+                practices.
+              </li>
+            </ul>
+          </article>
+
+          <article class="glass-panel experience-card" data-reveal>
+            <div class="experience-card__header">
+              <div>
+                <p class="experience-card__company">
+                  Queen's University - Faculty of Engineering and Applied Science
+                </p>
+                <h3>Teaching Assistant - Intro to Computer Programming</h3>
+              </div>
+              <div class="experience-card__meta">
+                <span>Kingston, Ontario</span>
+                <span>Sept 2023 - Dec 2023</span>
+              </div>
+            </div>
+
+            <ul class="experience-points">
+              <li>
+                Supported first-year engineering students in C programming,
+                debugging, and algorithmic problem solving.
+              </li>
+              <li>
+                Graded assignments and provided valuable technical feedback,
+                strengthening my ability to explain complex programming concepts
+                to beginner and non-technical students.
+              </li>
+              <li>
+                Balanced academic and instructional responsibilities, showing
+                strong time management and dependable delivery under deadlines.
+              </li>
+            </ul>
+          </article>
         </div>
-    </section>
-    <footer>
-        <nav>
-            <div class="nav-links-container">
-                <ul class="nav-links">
-                    <li><a href="#top">Back to Top</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#experience">Experience</a></li>
-                    <!-- <li><a href="#projects">Projects</a></li> -->
-                    <li><a href="#contact">Contact Me</a></li>
-                </ul>
+      </section>
+
+      <section class="section" id="projects">
+        <div class="section-heading" data-reveal>
+          <p class="eyebrow">Projects</p>
+          <h2>Recent work, current experiments, and what I am building next.</h2>
+        </div>
+
+        <div class="project-grid">
+          <article class="glass-panel project-card" data-reveal>
+            <div class="project-card__top">
+              <p class="project-card__status">Featured Project</p>
+              <h3>End-to-End NBA ETL</h3>
             </div>
-        </nav>
-        <p>Copyright &#169; 2026 Adrian Charles. All Rights Reserved</p>
+            <p>
+              An end-to-end NBA data pipeline that gathers, transforms, and
+              presents performance insights through a Streamlit app.
+            </p>
+            <div class="project-links">
+              <a
+                class="button-link button-link--ghost"
+                href="https://github.com/AdrianCharless/nba-performance-project"
+                target="_blank"
+                rel="noreferrer"
+                >GitHub</a
+              >
+              <a
+                class="button-link button-link--ghost"
+                href="https://nba-performance-project.streamlit.app/"
+                target="_blank"
+                rel="noreferrer"
+                >Live Demo</a
+              >
+            </div>
+          </article>
+
+          <article class="glass-panel project-card project-card--placeholder" data-reveal>
+            <div class="project-card__top">
+              <p class="project-card__status">Coming Soon</p>
+              <h3>Resume ATS Scanner</h3>
+            </div>
+            <p>
+              A resume-matching tool designed to compare application materials
+              against job descriptions and surface stronger keyword alignment.
+            </p>
+            <div class="project-links">
+              <span class="button-link button-link--ghost button-link--disabled"
+                >GitHub Link Later</span
+              >
+              <span class="button-link button-link--ghost button-link--disabled"
+                >Demo Link Later</span
+              >
+            </div>
+          </article>
+
+          <article class="glass-panel project-card project-card--placeholder" data-reveal>
+            <div class="project-card__top">
+              <p class="project-card__status">Coming Soon</p>
+              <h3>AWS Cloud Engineer Agent</h3>
+            </div>
+            <p>
+              An agent-focused cloud project exploring AWS workflows,
+              infrastructure thinking, and practical engineering automation.
+            </p>
+            <div class="project-links">
+              <span class="button-link button-link--ghost button-link--disabled"
+                >GitHub Link Later</span
+              >
+              <span class="button-link button-link--ghost button-link--disabled"
+                >Demo Link Later</span
+              >
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section contact-section" id="contact">
+        <div class="section-heading" data-reveal>
+          <p class="eyebrow">Contact</p>
+          <h2>Open to internships, thoughtful collaborations, and new opportunities.</h2>
+        </div>
+
+        <div class="contact-grid">
+          <article class="glass-panel contact-copy" data-reveal>
+            <p>
+              If you are looking for a student engineer who cares about learning
+              quickly, building carefully, and contributing with consistency, I
+              would love to connect.
+            </p>
+            
+          </article>
+
+          <article class="glass-panel contact-links-panel" data-reveal>
+            <a class="contact-item" href="mailto:adrian6charles23@gmail.com">
+              <span class="contact-item__label">Email</span>
+              <strong>adrian6charles23@gmail.com</strong>
+            </a>
+
+            <a
+              class="contact-item"
+              href="https://www.linkedin.com/in/adrian-charles-6a8991253/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <span class="contact-item__label">LinkedIn</span>
+              <strong>Connect on LinkedIn</strong>
+            </a>
+
+            <a
+              class="contact-item"
+              href="https://github.com/AdrianCharless"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <span class="contact-item__label">GitHub</span>
+              <strong>View my repositories</strong>
+            </a>
+
+            <a 
+              class="contact-item" 
+              href="./assets/Adrian Charles - Resume.pdf" 
+              target="_blank" 
+              rel="noreferrer"
+            >
+              <span class="contact-item__label">Resume</span>
+              <strong>View my resume</strong>
+            </a>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="section-shell footer-inner">
+        <a class="brand brand--footer" href="#top">Adrian Charles</a>
+        <div class="footer-links">
+          <a href="#about">About</a>
+          <a href="#experience">Experience</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <p>Copyright <span data-year></span> Adrian Charles. All rights reserved.</p>
+      </div>
     </footer>
-    <script src="script.js"></script>
-</body>
+
+    <aside class="chatbot-shell" aria-label="Adrian interview chatbot">
+      <section
+        class="chatbot-panel"
+        id="chatbot-panel"
+        aria-label="Interview assistant chat"
+        aria-hidden="true"
+      >
+        <header class="chatbot-header">
+          <div>
+            <p class="chatbot-kicker">Adrian AI</p>
+            <h2>Interview Chatbot</h2>
+          </div>
+          <button class="chatbot-close" type="button" aria-label="Close chatbot">
+            Close
+          </button>
+        </header>
+
+        <div
+          class="chatbot-messages"
+          id="chatbot-messages"
+          role="log"
+          aria-live="polite"
+          aria-relevant="additions"
+        ></div>
+
+        <div class="chatbot-suggestions" aria-label="Suggested interview questions">
+          <button
+            class="chatbot-chip"
+            type="button"
+            data-chat-prompt="Tell me about your experience."
+          >
+            Experience
+          </button>
+          <button
+            class="chatbot-chip"
+            type="button"
+            data-chat-prompt="What projects have you built?"
+          >
+            Projects
+          </button>
+          <button
+            class="chatbot-chip"
+            type="button"
+            data-chat-prompt="What are your strongest technical skills?"
+          >
+            Skills
+          </button>
+        </div>
+
+        <form class="chatbot-form" id="chatbot-form">
+          <label class="sr-only" for="chatbot-input">
+            Ask an interview question
+          </label>
+          <input
+            class="chatbot-input"
+            id="chatbot-input"
+            type="text"
+            autocomplete="off"
+            placeholder="Ask an interview question..."
+          />
+          <button class="chatbot-send" type="submit">Send</button>
+        </form>
+      </section>
+
+      <button
+        class="chatbot-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="chatbot-panel"
+      >
+        <span class="chatbot-toggle__icon" aria-hidden="true">✦</span>
+        Ask Adrian AI
+      </button>
+    </aside>
+
+    <script src="./script.js"></script>
+  </body>
 </html>
