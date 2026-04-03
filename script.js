@@ -304,7 +304,7 @@ const submitChatbotPrompt = (prompt) => {
 
 if (chatbotPanel && chatbotToggle && chatbotForm && chatbotInput && chatbotMessages) {
   addChatMessage(
-    "Hi, I'm Adrian AI. Ask me interview questions about my experience, projects, technical skills, or career goals.",
+    "Hi, I'm AC AI. Ask me interview questions about my experience, projects, technical skills, or career goals.",
     "bot"
   );
 

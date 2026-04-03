@@ -572,6 +572,7 @@ a {
   border-radius: var(--radius-sm);
   border: 1px solid rgba(222, 233, 255, 0.14);
   background: rgba(255, 255, 255, 0.05);
+  white-space: nowrap;
 }
 
 .experience-points {
