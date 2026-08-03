@@ -32,7 +32,7 @@ const interviewAnswers = [
       "summary",
     ],
     answer:
-      "I'm Adrian Charles, a 4th-year Computer Engineering student at Queen's University. My experience sits at the intersection of software, data, and cloud engineering, and I'm especially interested in building reliable internal tools, data workflows, and practical systems that make engineering work easier.",
+      "I'm Adrian Charles, a Computer Engineering Graduate from Queen's University. My experience sits at the intersection of software, data, and cloud engineering, and I'm especially interested in building reliable internal tools, data workflows, and practical systems that make engineering work easier.",
   },
   {
     keywords: [
@@ -129,7 +129,7 @@ const interviewAnswers = [
   {
     keywords: ["contact", "email", "linkedin", "github", "reach", "connect"],
     answer:
-      "You can reach me by email at adrian6charles23@gmail.com, connect with me on LinkedIn at linkedin.com/in/adrian-charles-6a8991253, or view my GitHub at github.com/AdrianCharless.",
+      "You can reach me by email at adrianancharles@gmail.com, connect with me on LinkedIn at linkedin.com/in/adriancharless, or view my GitHub at github.com/AdrianCharless.",
   },
 ];
 
